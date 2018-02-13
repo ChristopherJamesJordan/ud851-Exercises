@@ -15,6 +15,7 @@
  */
 package com.example.android.datafrominternet;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
@@ -53,11 +54,11 @@ public class MainActivity extends AppCompatActivity {
 
         if (itemId == R.id.action_search) {
             Context context = MainActivity.this;
-            Char[] textToShow = "Search clicked";
-            Toast.makeTex(context, textToShow, Toast.LENGTH_SHORT).show();
+            CharSequence textToShow = "Search clicked";
+            Toast.makeText(context, textToShow, Toast.LENGTH_SHORT).show();
             return true;
         }
 
-        return self.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(item);
     }
 }
